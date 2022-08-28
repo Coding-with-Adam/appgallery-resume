@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 
 dash.register_page(__name__, path='/', order=0)
 
+# resume sample template from https://zety.com/
 layout = html.Div([
     dcc.Markdown('# Adam Schroeder', style={'textAlign':'center'}),
     dcc.Markdown('New York, USA', style={'textAlign': 'center'}),
@@ -19,18 +20,18 @@ layout = html.Div([
     html.Hr(),
     dbc.Row([
         dbc.Col([
-            html.Ul([
-                html.Li('Guest services'),
-                html.Li('Inventory control procedutes'),
-                html.Li('Merchandising expertise')
-            ])
+            dcc.Markdown('''
+            * Guest services 
+            * Inventory control procedutes
+            * Merchandising expertise
+            ''')
         ], width={"size": 3, "offset": 1}),
         dbc.Col([
-            html.Ul([
-                html.Li('Loss prevention'),
-                html.Li('Cash register operations'),
-                html.Li('Product promotions')
-            ])
+            dcc.Markdown('''
+            * Loss prevention 
+            * Cash register operations
+            * Product promotions
+            ''')
         ], width=3)
     ], justify='center'),
 
