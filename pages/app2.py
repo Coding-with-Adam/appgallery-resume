@@ -22,27 +22,6 @@ def layout():
         [
             dbc.Row(
                 [
-                    dbc.Col(
-                        [
-                            dcc.Dropdown(
-                                id="slct_year", options=df.Year.unique(), value=2015
-                            )
-                        ],
-                        width=4,
-                    ),
-                    dbc.Col([html.Div(id="output_container", children=[])], width=8),
-                ]
-            ),
-            dbc.Row([dbc.Col([dcc.Graph(id="my_bee_map", figure={})], width=12)]),
-        ]
-    )
-
-
-def layout():
-    return html.Div(
-        [
-            dbc.Row(
-                [
                     dbc.Col([sidebar()], xs=4, sm=4, md=2, lg=2, xl=2, xxl=2),
                     dbc.Col(
                         [
